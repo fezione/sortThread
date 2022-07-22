@@ -42,6 +42,7 @@ int findPartition( QVector<int> &vec, const int &l, const int &r ) {
     for ( int q = l; q < r; ++q ) {
         if ( vec.at(q) <= x ) {
             std::swap ( vec[q], vec[less] );
+            ++less;
         }
     }
     std::swap ( vec[less], vec[r] );
